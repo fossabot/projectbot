@@ -1,5 +1,3 @@
-/* globals nextRelease */
-
 module.exports = {
   plugins: [
     '@semantic-release/commit-analyzer',
@@ -14,7 +12,8 @@ module.exports = {
     [
       '@semantic-release/exec',
       {
-        publishCmd: `lerna publish ${nextRelease.version} -y`,
+        // eslint-disable-next-line no-template-curly-in-string
+        publishCmd: 'lerna publish ${nextRelease.version} -y',
       },
     ],
     '@semantic-release/git',
