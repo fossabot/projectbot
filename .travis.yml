@@ -39,11 +39,11 @@ jobs:
       script: npm run build
       after_success:
         - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-        - git remote set-url origin "https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git" > /dev/null 2>&1
+        - git remote add pub https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
         - git checkout master
       deploy:
         provider: script
         skip_cleanup: true
-        script: npx lerna publish
+        script: npx lerna publish --git-remote pub
 
 cache: npm
