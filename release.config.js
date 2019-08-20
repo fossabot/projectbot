@@ -13,7 +13,7 @@ module.exports = {
       '@semantic-release/exec',
       {
         // eslint-disable-next-line no-template-curly-in-string
-        publishCmd: 'lerna publish ${nextRelease.version} -y --no-push',
+        prepareCmd: 'lerna publish ${nextRelease.version} -y --no-push',
       },
     ],
     '@semantic-release/git',
