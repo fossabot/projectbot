@@ -1,0 +1,45 @@
+language: node_js
+node_js:
+  - node
+branches:
+  only:
+    - master
+    - develop
+
+stages:
+  - build
+  - test
+  - name: deploy
+    if: branch = master AND type != pull_request
+
+jobs:
+  include:
+    - &Build
+      name: 'Latest: Building'
+      stage: build
+      script: npm run build
+      node_js: node
+    - <<: *Build
+      name: '10: Building'
+      node_js: '10'
+    - name: 'Linting'
+      stage: test
+      script: npm run lint
+    - &Test
+      name: 'Latest: Unit Tests'
+      stage: test
+      script: npm run test
+      node_js: node
+    - <<: *Test
+      name: '10: Unit Tests'
+      node_js: '10'
+    - stage: deploy
+      node_js: lts/*
+      name: Deploy
+      script: npm run build
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script: npm run semantic-release
+
+cache: npm

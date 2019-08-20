@@ -1,0 +1,28 @@
+{
+  "name": "@projectbot/cli",
+  "version": "0.0.0",
+  "description": "ProjectBots cli",
+  "author": "Tilmann Meyer <allescrafterx@gmail.com>",
+  "homepage": "https://github.com/atiltedtree/projectbot#readme",
+  "license": "MIT",
+  "main": "lib/cli.js",
+  "bin": {
+    "pb": "lib/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "yargs": "^13.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atiltedtree/projectbot.git"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/atiltedtree/projectbot/issues"
+  }
+}
