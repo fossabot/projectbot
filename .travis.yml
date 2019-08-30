@@ -37,13 +37,9 @@ jobs:
       node_js: lts/*
       name: Deploy
       script: npm run build
-      after_success:
-        - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-        - git remote add pub https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git -f
-        - git checkout master
       deploy:
         provider: script
         skip_cleanup: true
-        script: npx lerna publish --git-remote pub
+        script: npx multi-semantic-release
 
 cache: npm
