@@ -17,7 +17,6 @@ jobs:
     - name: 'Building'
       stage: build
       script: npm run build
-      node_js: node
     - name: 'Linting'
       stage: test
       script: npm run lint
@@ -27,9 +26,7 @@ jobs:
     - name: 'Unit Tests'
       stage: test
       script: npm run test
-      node_js: node
     - stage: deploy
-      node_js: lts/*
       name: Deploy
       script: npm run build
       deploy:
