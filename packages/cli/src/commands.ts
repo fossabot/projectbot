@@ -39,7 +39,7 @@ export interface Command {
    * @type {any}
    * @memberof Command
    */
-  default?: any;
+  default?: string | number | boolean;
 }
 
 /**

@@ -14,25 +14,20 @@ stages:
 
 jobs:
   include:
-    - &Build
-      name: 'Latest: Building'
+    - name: 'Building'
       stage: build
       script: npm run build
       node_js: node
-    - <<: *Build
-      name: '10: Building'
-      node_js: '10'
     - name: 'Linting'
       stage: test
       script: npm run lint
-    - &Test
-      name: 'Latest: Unit Tests'
+    - name: 'CodeChecks'
+      stage: test
+      script: npx codechecks
+    - name: 'Unit Tests'
       stage: test
       script: npm run test
       node_js: node
-    - <<: *Test
-      name: '10: Unit Tests'
-      node_js: '10'
     - stage: deploy
       node_js: lts/*
       name: Deploy

@@ -1,0 +1,5 @@
+checks:
+  - name: typecov
+    options:
+      name: cli
+      tsconfigPath: ./packages/cli/tsconfig.json

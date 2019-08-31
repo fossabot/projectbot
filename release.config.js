@@ -6,7 +6,7 @@ module.exports = {
       '@semantic-release/changelog',
       {
         changelogTitle:
-          '# Changelog\n\n### This uses [Conventional Commits](https://conventionalcommits.org) for commit guidelines.',
+          '# Changelog\n\n#### This uses [Conventional Commits](https://conventionalcommits.org) for commit guidelines.',
       },
     ],
     [
@@ -21,7 +21,6 @@ module.exports = {
         assets: 'dist/*.tgz',
       },
     ],
-
     '@semantic-release/git',
   ],
 };
