@@ -1,11 +1,17 @@
+---
+name: Feature change
+about: Add a feature requested in an issue
+title: ''
+labels: enhancement
+assignees: ''
+---
+
 ### Requirements for Adding, Changing, or Removing a Feature
 
-* Fill out the template below. Any pull request that does not include enough information to be reviewed in a timely manner may be closed at the maintainers' discretion.
-* The pull request must contribute a change that has been endorsed by the maintainer team. See details in the template below.
-* The pull request must update the test suite to exercise the updated functionality. If you don't know how just don't (a maintainer will add them later)
-* After you create the pull request, all status checks must be pass before a maintainer reviews your contribution.
-
-
+- Fill out the template below. Any pull request that does not include enough information to be reviewed in a timely manner may be closed at the maintainers' discretion.
+- The pull request must contribute a change that has been endorsed by the maintainer team. See details in the template below.
+- The pull request must update the test suite to exercise the updated functionality. If you don't know how just don't (a maintainer will add them later)
+- After you create the pull request, all status checks must be pass before a maintainer reviews your contribution.
 
 ### Feature request
 
