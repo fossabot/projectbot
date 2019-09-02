@@ -20,7 +20,8 @@ jobs:
       script: npm run test
     - stage: deploy
       name: Deploy
-      script: npm run build
+      script: skip
+      before_deploy: npm run build
       deploy:
         provider: script
         skip_cleanup: true
