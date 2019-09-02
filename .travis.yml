@@ -4,25 +4,17 @@ node_js:
 branches:
   only:
     - master
-    - develop
 
 stages:
-  - build
   - test
   - name: deploy
     if: branch = master AND type != pull_request
 
 jobs:
   include:
-    - name: 'Building'
-      stage: build
-      script: npm run build
     - name: 'Linting'
       stage: test
       script: npm run lint
-    - name: 'CodeChecks'
-      stage: test
-      script: npx codechecks
     - name: 'Unit Tests'
       stage: test
       script: npm run test

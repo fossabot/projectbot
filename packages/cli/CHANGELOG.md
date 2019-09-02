@@ -1,3 +1,5 @@
+<!-- markdownlint-disable -->
+
 # Changelog
 
 #### This uses [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
