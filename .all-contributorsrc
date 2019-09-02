@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "dependabot",
+      "name": "Dependabot",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/27347476?v=4",
+      "profile": "https://dependabot.com",
+      "contributions": [
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "projectbot",
+  "projectOwner": "ATiltedTree",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
