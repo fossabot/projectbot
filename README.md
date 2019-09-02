@@ -14,7 +14,7 @@
       src="https://img.shields.io/github/license/atiltedtree/projectbot?style=flat-square"
     />
   </a>
-  <a href="#contributors">
+  <a href="#contributors-">
     <img alt="All Contributors" src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square">
   </a>
 </p>
