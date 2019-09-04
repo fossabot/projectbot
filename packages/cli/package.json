@@ -20,11 +20,14 @@
     "url": "git+https://github.com/atiltedtree/projectbot.git"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "build:native": "node scripts/build-native.js"
   },
   "bugs": {
     "url": "https://github.com/atiltedtree/projectbot/issues"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nexe": "^3.3.2"
+  },
   "peerDependencies": {}
 }

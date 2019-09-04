@@ -10,6 +10,7 @@
     "moduleResolution": "node",
     "target": "es3",
     "strict": true,
+    "resolveJsonModule": true,
     "paths": {
       "@yapm/*": ["packages/*"]
     }

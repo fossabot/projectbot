@@ -18,6 +18,9 @@ jobs:
     - name: 'Unit Tests'
       stage: test
       script: npm run test
+    - name: 'Native Build'
+      stage: test
+      script: npm run build && npx lerna run build:native
     - stage: deploy
       name: Deploy
       script: skip
