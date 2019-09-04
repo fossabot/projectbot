@@ -20,7 +20,7 @@ jobs:
       script: npm run test
     - name: 'Native Build'
       stage: test
-      script: npm run build && npx lerna run build:native
+      script: npm run build && npx lerna run build:native --stream
     - stage: deploy
       name: Deploy
       script: skip
