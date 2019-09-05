@@ -22,7 +22,7 @@
     }
   },
   "devDependencies": {
-    "@codechecks/client": "^0.1.7",
+    "@codechecks/client": "^0.1.8",
     "@semantic-release/changelog": "^3.0.4",
     "@semantic-release/commit-analyzer": "^6.3.0",
     "@semantic-release/git": "^7.0.16",
