@@ -6,7 +6,7 @@ module.exports = {
       '@semantic-release/changelog',
       {
         changelogTitle:
-          '# Changelog\n\n#### This uses [Conventional Commits](https://conventionalcommits.org) for commit guidelines.',
+          '<!-- markdownlint-disable -->\n\n# Changelog\n\n#### This uses [Conventional Commits](https://conventionalcommits.org) for commit guidelines.',
       },
     ],
     [
