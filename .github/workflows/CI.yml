@@ -90,6 +90,12 @@ jobs:
           npm install
         env:
           CI: true
+      - name: Build Native
+        run: |
+          npm run build
+          npx lerna run build:native --stream
+        env:
+          CI: true
       - name: Renaming executable
         run: |
           mkdir packages/cli/dist/linux
@@ -100,8 +106,7 @@ jobs:
           mv packages/cli/dist/cli-win.exe packages/cli/dist/win/pb.exe
       - name: Release
         run: |
-          npm run build
-          npx lerna run build:native --stream
+
           npx multi-semantic-release
         env:
           CI: true
