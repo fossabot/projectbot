@@ -1,0 +1,4 @@
+Github Actions:
+  ☐ Add basic build and native artifacts @created(04-09-19 22:30)
+  ☐ Figure out how i can get every artifact from every platform to deploy @created(04-09-19 22:31)
+    If i use zeit/pkg instead of nexe/nexe it builds all on linux

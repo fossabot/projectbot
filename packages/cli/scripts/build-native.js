@@ -1,15 +1,13 @@
-const { compile } = require('nexe');
+const { exec } = require('pkg');
 
-const CURRENT_NODE_VERSION = '12.9.1';
+const targets = [
+  { target: 'linux-x64', out: './dist/pb-linux' },
+  { target: 'macos-x64', out: './dist/pb-macos' },
+  { target: 'win-x64', out: './dist/pb-windows.exe' },
+];
 
-compile({
-  input: '../lib/cli.js',
-  targets: [
-    { arch: 'x64', platform: 'linux', version: CURRENT_NODE_VERSION },
-    { arch: 'x64', platform: 'macos', version: CURRENT_NODE_VERSION },
-    { arch: 'x64', platform: 'windows', version: CURRENT_NODE_VERSION },
-  ],
-  output: 'dist/pb',
-  name: 'pb',
-  ghToken: process.env.GH_TOKEN,
+targets.forEach(target => {
+  exec(['./index.js', '--target', target.target, '--output', target.out]).then(() => {
+    console.log(`${target.target} build done!`);
+  });
 });
