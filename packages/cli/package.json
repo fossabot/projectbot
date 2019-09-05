@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "build:native": "node scripts/build-native.js"
+    "build:native": "pkg . --out-path dist"
   },
   "bugs": {
     "url": "https://github.com/atiltedtree/projectbot/issues"
