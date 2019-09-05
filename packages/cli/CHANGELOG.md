@@ -1,15 +1,14 @@
+<!-- markdownlint-disable -->
+
 # Changelog
 
 #### This uses [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## @projectbot/cli [1.0.2](https://github.com/atiltedtree/projectbot/compare/@projectbot/cli@1.0.1...@projectbot/cli@1.0.2) (2019-09-05)
 
-
 ### Bug Fixes
 
-* doch ([be97b59](https://github.com/atiltedtree/projectbot/commit/be97b59))
-
-<!-- markdownlint-disable -->
+- doch ([be97b59](https://github.com/atiltedtree/projectbot/commit/be97b59))
 
 # Changelog
 
