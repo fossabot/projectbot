@@ -1,3 +1,14 @@
+# Changelog
+
+#### This uses [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## @projectbot/cli [1.0.3](https://github.com/atiltedtree/projectbot/compare/@projectbot/cli@1.0.2...@projectbot/cli@1.0.3) (2019-09-05)
+
+
+### Bug Fixes
+
+* fixed linting ([5792ef4](https://github.com/atiltedtree/projectbot/commit/5792ef4))
+
 <!-- markdownlint-disable -->
 
 # Changelog
