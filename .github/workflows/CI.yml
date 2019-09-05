@@ -7,7 +7,6 @@ on:
   pull_request:
 jobs:
   test:
-    name: Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -66,7 +65,6 @@ jobs:
           name: Windows
           path: packages/cli/dist/cli-win.exe
   release:
-    name: Release
     needs: [test, build]
     runs-on: ubuntu-latest
     steps:
