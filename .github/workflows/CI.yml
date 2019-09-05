@@ -35,26 +35,26 @@ jobs:
         run: |
           npm run build
           npx lerna run build:native --stream
-      - name: Package artifacts
-        run: |
-          mkdir artifact-linux
-          mv packages/cli/dist/pb-linux artifact-linux || true
-          mkdir artifact-macos
-          mv packages/cli/dist/pb-macos artifact-macos || true
-          mkdir artifact-windows
-          mv packages/cli/dist/pb-windows.exe artifact-windows || true
+      # - name: Package artifacts
+      #   run: |
+      #     mkdir artifact-linux
+      #     mv packages/cli/dist/cli-linux artifact-linux || true
+      #     mkdir artifact-macos
+      #     mv packages/cli/dist/cli-macos artifact-macos || true
+      #     mkdir artifact-windows
+      #     mv packages/cli/dist/cli-win.exe artifact-windows || true
       - name: Upload Linux
         uses: actions/upload-artifact@master
         with:
           name: Linux
-          path: artifact-linux
+          path: packages/cli/dist/cli-linux
       - name: Upload MacOS
         uses: actions/upload-artifact@master
         with:
           name: MacOS
-          path: artifact-macos
+          path: packages/cli/dist/cli-macos
       - name: Upload Windows
         uses: actions/upload-artifact@master
         with:
           name: Windows
-          path: artifact-windows
+          path: packages/cli/dist/cli-win.exe
