@@ -89,6 +89,9 @@ jobs:
           CI: true
       - name: Renaming executable
         run: |
+          mkdir packages/cli/dist/linux
+          mkdir packages/cli/dist/macos
+          mkdir packages/cli/dist/win
           mv packages/cli/dist/cli-linux packages/cli/dist/linux/pb
           mv packages/cli/dist/cli-macos packages/cli/dist/macos/pb
           mv packages/cli/dist/cli-win.exe packages/cli/dist/win/pb.exe
