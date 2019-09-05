@@ -1,0 +1,56 @@
+name: ContinuousIntegration
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Install node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install dependencies
+        run: |
+          npm install
+        env:
+          CI: true
+      - name: Linting
+        run: |
+          npm run lint
+        env:
+          CI: true
+      - name: Unit Tests
+        run: |
+          npm run test
+        env:
+          CI: true
+      - name: Native Build
+        run: |
+          npm run build
+          npx lerna run build:native --stream
+      - name: Package artifacts
+        run: |
+          mkdir artifact-linux
+          mv packages/cli/dist/pb-linux artifact-linux || true
+          mkdir artifact-macos
+          mv packages/cli/dist/pb-macos artifact-macos || true
+          mkdir artifact-windows
+          mv packages/cli/dist/pb-windows.exe artifact-windows || true
+      - name: Upload Linux
+        uses: actions/upload-artifact@master
+        with:
+          name: Linux
+          path: artifact-linux
+      - name: Upload MacOS
+        uses: actions/upload-artifact@master
+        with:
+          name: MacOS
+          path: artifact-macos
+      - name: Upload Windows
+        uses: actions/upload-artifact@master
+        with:
+          name: Windows
+          path: artifact-windows
