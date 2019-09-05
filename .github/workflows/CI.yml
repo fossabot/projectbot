@@ -104,6 +104,10 @@ jobs:
           mv packages/cli/dist/cli-linux packages/cli/dist/linux/pb
           mv packages/cli/dist/cli-macos packages/cli/dist/macos/pb
           mv packages/cli/dist/cli-win.exe packages/cli/dist/win/pb.exe
+          zip -r packages/cli/dist/pb-linux.zip packages/cli/dist/linux
+          zip -r packages/cli/dist/pb-macos.zip packages/cli/dist/macos
+          zip -r packages/cli/dist/pb-win.zip packages/cli/dist/win
+
       - name: Release
         run: |
 

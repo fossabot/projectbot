@@ -19,9 +19,9 @@ module.exports = {
       '@semantic-release/github',
       {
         assets: [
-          { path: 'dist/linux/pb', label: 'Linux' },
-          { path: 'dist/macos/pb', label: 'MacOS' },
-          { path: 'dist/win/pb.exe', label: 'Windows' },
+          { path: 'dist/pb-linux.zip', label: 'Linux' },
+          { path: 'dist/pb-macos.zip', label: 'MacOS' },
+          { path: 'dist/pb-win.zip', label: 'Windows' },
           { path: 'dist/*.tgz' },
         ],
       },
