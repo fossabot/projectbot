@@ -51,21 +51,26 @@ jobs:
         run: |
           npm run build
           npx lerna run build:native --stream
+      - name: Renaming executable
+        run: |
+          mv packages/cli/dist/cli-linux packages/cli/dist/linux/pb
+          mv packages/cli/dist/cli-macos packages/cli/dist/macos/pb
+          mv packages/cli/dist/cli-win.exe packages/cli/dist/win/pb.exe
       - name: Upload Linux
         uses: actions/upload-artifact@master
         with:
           name: Linux
-          path: packages/cli/dist/cli-linux
+          path: packages/cli/dist/linux/pb
       - name: Upload MacOS
         uses: actions/upload-artifact@master
         with:
           name: MacOS
-          path: packages/cli/dist/cli-macos
+          path: packages/cli/dist/macos/pb
       - name: Upload Windows
         uses: actions/upload-artifact@master
         with:
           name: Windows
-          path: packages/cli/dist/cli-win.exe
+          path: packages/cli/dist/win/pb.exe
   release:
     name: Release
     needs: [test, build]
@@ -82,6 +87,11 @@ jobs:
           npm install
         env:
           CI: true
+      - name: Renaming executable
+        run: |
+          mv packages/cli/dist/cli-linux packages/cli/dist/linux/pb
+          mv packages/cli/dist/cli-macos packages/cli/dist/macos/pb
+          mv packages/cli/dist/cli-win.exe packages/cli/dist/win/pb.exe
       - name: Release
         run: |
           npm run build

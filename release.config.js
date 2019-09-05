@@ -18,7 +18,12 @@ module.exports = {
     [
       '@semantic-release/github',
       {
-        assets: 'dist/*',
+        assets: [
+          { path: 'dist/linux/pb', label: 'Linux' },
+          { path: 'dist/macos/pb', label: 'MacOS' },
+          { path: 'dist/win/pb.exe', label: 'Windows' },
+          { path: 'dist/*.tgz' },
+        ],
       },
     ],
     '@semantic-release/git',
