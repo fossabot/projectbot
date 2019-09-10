@@ -49,7 +49,7 @@ jobs:
       - name: Native Build
         run: |
           yarn run build
-          npx wsrun --stream
+          npx wsrun build:native
       - name: Renaming executable
         run: |
           mkdir packages/cli/dist/linux
@@ -92,7 +92,7 @@ jobs:
       - name: Build Native
         run: |
           yarn run build
-          npx wsrun --stream
+          npx wsrun build:native
         env:
           CI: true
       - name: Renaming executable
