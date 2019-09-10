@@ -1,3 +1,4 @@
+speculativeBranchSelection: false
 checks:
   - name: typecov
     options:
