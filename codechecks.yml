@@ -1,4 +1,7 @@
-speculativeBranchSelection: false
+settings:
+  speculativeBranchSelection: false
+  branches:
+    - master
 checks:
   - name: typecov
     options:
