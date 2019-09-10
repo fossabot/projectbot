@@ -18,17 +18,17 @@ jobs:
           node-version: 12
       - name: Install dependencies
         run: |
-          npm install
+          yarn
         env:
           CI: true
       - name: Linting
         run: |
-          npm run lint
+          yarn run lint
         env:
-          CC_SECRET: ${{ secrets.CC_SECRET }}
+          CI: true
       - name: Unit Tests
         run: |
-          npm run test
+          yarn run test
         env:
           CI: true
   build:
@@ -43,13 +43,13 @@ jobs:
           node-version: 12
       - name: Install dependencies
         run: |
-          npm install
+          yarn
         env:
           CI: true
       - name: Native Build
         run: |
-          npm run build
-          npx lerna run build:native --stream
+          yarn run build
+          npx wsrun --stream
       - name: Renaming executable
         run: |
           mkdir packages/cli/dist/linux
@@ -86,13 +86,13 @@ jobs:
           node-version: 12
       - name: Install dependencies
         run: |
-          npm install
+          yarn
         env:
           CI: true
       - name: Build Native
         run: |
-          npm run build
-          npx lerna run build:native --stream
+          yarn run build
+          npx wsrun --stream
         env:
           CI: true
       - name: Renaming executable
@@ -106,10 +106,8 @@ jobs:
           zip -r -D packages/cli/dist/pb-linux.zip packages/cli/dist/linux
           zip -r -D packages/cli/dist/pb-macos.zip packages/cli/dist/macos
           zip -r -D packages/cli/dist/pb-win.zip packages/cli/dist/win
-
       - name: Release
         run: |
-
           npx multi-semantic-release
         env:
           CI: true

@@ -1,9 +1,0 @@
-settings:
-  speculativeBranchSelection: false
-  branches:
-    - master
-checks:
-  - name: typecov
-    options:
-      name: cli
-      tsconfigPath: ./packages/cli/tsconfig.json
