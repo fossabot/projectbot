@@ -14,6 +14,7 @@
       src="https://img.shields.io/github/license/atiltedtree/projectbot?style=flat-square"
     />
   </a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2FATiltedTree%2Fprojectbot?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FATiltedTree%2Fprojectbot.svg?type=shield"/></a>
   <a href="#contributors-">
     <img
       alt="All Contributors"
@@ -26,6 +27,9 @@
     <img alt="npm" src="https://img.shields.io/npm/dm/@projectbot/cli?style=for-the-badge" />
   </a>
 </p>
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FATiltedTree%2Fprojectbot.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FATiltedTree%2Fprojectbot?ref=badge_large)
 
 ## Contributors ✨
 
