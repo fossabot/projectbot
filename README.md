@@ -35,6 +35,10 @@ Thanks goes to these wonderful people ([emojikey](https://allcontributors.org/do
 <!-- markdownlint-disable -->
 <!-- prettier-ignore -->
 <table>
+  <tr>
+    <td align="center"><a href="https://dependabot.com"><img src="https://avatars1.githubusercontent.com/u/27347476?v=4" width="100px;" alt="Dependabot"/><br /><sub><b>Dependabot</b></sub></a><br /><a href="#maintenance-dependabot" title="Maintenance">🚧</a></td>
+  </tr>
+</table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
